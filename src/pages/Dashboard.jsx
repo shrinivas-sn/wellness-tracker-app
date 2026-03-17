@@ -4,7 +4,9 @@ export default function Dashboard() {
   const data = JSON.parse(localStorage.getItem("dailyLog")) || [];
   const userName = data.length > 0 ? data[0].name : "User";
   const [quote, setQuote] = useState("Loading a quote...");
-
+  const lastLog = data.length>0 ? data[data.length -1] : "No data found today";
+  const didLogToday = lastLog? lastLog.date === new Date().toLocaleDateString() : false;
+  console.log(lastLog);
   useEffect(() => {
     fetch("https://dummyjson.com/quotes/random")
       .then((response) => response.json())
@@ -29,7 +31,7 @@ export default function Dashboard() {
     <div className={styles.dashboard}>
       <h1>Dashborad Page</h1>
       <div className={styles.container}>
-        <div className={styles.dashboardcard}>
+        <div className={styles.card}>
           <h2 className={styles.subtitle}>
             Summary of {userName}'s total activity:
           </h2>
@@ -40,9 +42,23 @@ export default function Dashboard() {
             <p>4. Average Mood score is: {averageMoodScore}.</p>
           </div>
         </div>
-        <div className={styles.quotecard}>
+        <div className={styles.card}>
           <h2 className={styles.subtitle}>Today's motivational quote:</h2>
           <h3 className={styles.content}>{quote}</h3>
+        </div>
+        <div className={styles.card}>
+          <h2 className={styles.subtitle}>Today's Activity of {userName}:</h2>
+          <div>
+            {didLogToday? (
+              <div className ={styles.content}>
+              <p>1. Date: {lastLog.date}</p>
+              <p>2. Today's water intake: {lastLog.water} glasses</p>
+              <p>3. Today's sleep hours: {lastLog.sleep} hours</p>
+              <p>4. Today's mood rate: {lastLog.mood}</p>
+              <p>4. Today's comment: {lastLog.comment}</p>
+              </div>
+            ) : 'no activity found today'}
+          </div>
         </div>
       </div>
     </div>

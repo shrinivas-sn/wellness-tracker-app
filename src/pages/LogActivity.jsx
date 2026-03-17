@@ -21,6 +21,8 @@ export default function LogActivity() {
       mood: mood,
       comment: comment,
     };
+    
+    //Storing the data into local storage
     const existingData = JSON.parse(localStorage.getItem("dailyLog")) || [];
     existingData.push(dailyLog);
     localStorage.setItem("dailyLog", JSON.stringify(existingData));
