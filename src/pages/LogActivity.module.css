@@ -1,0 +1,48 @@
+.maindiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.formdiv {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid yellow;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+}
+option {
+  height: 20px;
+  width: 100px;
+}
+
+input {
+  height: 30px;
+  width: 250px;
+  border-radius: 10px;
+}
+
+textarea {
+  height: 200px;
+  width: 250px;
+  resize: none;
+  border-radius: 10px;
+}
+
+button {
+  height: 30px;
+  width: 60%;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+button:hover {
+  transition: all 0.15s ease-in-out;
+  transform: scale(0.95);
+  cursor: pointer;
+}
+button:active {
+  transition: all 0.15s ease-in-out;
+  transform: scale(0.9);
+}

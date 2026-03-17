@@ -1,0 +1,29 @@
+.historypage {
+  margin: 0px;
+  padding: 10px;
+}
+.historydiv {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.historycard {
+  background: rgba(70, 67, 67, 0.5);
+  height: 100%;
+  width: 300px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgb(100, 68, 68);
+  box-shadow: 5px 5px 5px rgb(100, 68, 68);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+p{
+  font-weight: 600;
+  color: white;
+}

@@ -1,0 +1,49 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  height: 10vh;
+  width: 100%;
+  background: linear-gradient(to right, rgb(68, 55, 46), rgb(22, 78, 29));
+  margin: 0px;
+  padding: 10px;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+}
+
+.navlist {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  width: 50%;
+}
+
+.navbtn {
+  height: 30px;
+  width: 100%;
+  padding: 5px;
+  text-decoration: none;
+  font-size: larger;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbtn:hover {
+  transition: all 0.2s ease-in-out;
+  transform: translateY(-3px);
+  text-decoration: underline;
+  border-radius: 10px;
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+.navbtn:active{
+  transition: all 0.15s ease-in-out;
+  transform: scale(0.9);
+}

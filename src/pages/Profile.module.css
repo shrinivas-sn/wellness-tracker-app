@@ -1,0 +1,31 @@
+.profilecard{
+    height: 400px;
+    width: 500px;
+    margin: 10px;
+    padding: 10px;
+    background-color: grey;
+    color: black;
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0px;
+    border-radius: 10px;
+}
+
+.profiletitle{
+    font-size: 30px;
+    font-weight: 400;
+    color: black;
+}
+
+.profilephoto{
+    height: 300px;
+    width: 300px;
+    background-image: url('../images/photo.jpg');
+    background-size: cover;
+    z-index: 1;
+    border-radius: 50%;
+}
