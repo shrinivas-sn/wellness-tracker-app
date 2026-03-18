@@ -3,7 +3,7 @@ import styles from "./NavPage.module.css";
 export default function NavPage() {
   return (
     <nav className={styles.navbar}>
-      <div>
+      <div className={styles.home}>
         <NavLink className={styles.navbtn} to="/">
           Home
         </NavLink>

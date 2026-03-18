@@ -2,7 +2,7 @@ import styles from "./Home.module.css";
 export default function Home() {
   return (
     <div className={styles.homepage}>
-      <h1 className={styles.title}>Daily Wellness Tracker Application</h1><br />
+      <h1 className={styles.title}>Daily Wellness Tracker Application</h1><hr />
       <div className={styles.carddiv}>
     <Cards />
       </div>
@@ -63,3 +63,4 @@ const appFeatures = [
     description: "Look back at your past entries with a sortable, filterable history list to see how far you've come on your wellness journey."
   },
 ];
+
